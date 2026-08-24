@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Discover films | Reelhouse{% endblock %}
+{% block content %}
+<section class="hero"><div><p class="eyebrow">THE WEEKLY SCREENING LIST</p><h1>Find your next<br><em>great watch.</em></h1><p class="hero-copy">New releases, cult favorites, and the films everyone will be talking about.</p></div><div class="hero-mark">RH<br><small>2026</small></div></section>
+{% include 'movies/section.html' with heading='Featured tonight' movies=featured_movies accent='feature' %}
+{% include 'movies/section.html' with heading='Trending now' movies=trending_movies accent='trend' %}
+{% include 'movies/section.html' with heading='Freshly released' movies=recent_movies accent='fresh' %}
+{% endblock %}

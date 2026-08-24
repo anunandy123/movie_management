@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}Join Reelhouse{% endblock %}
+{% block content %}<section class="auth-panel"><p class="eyebrow">BECOME A MEMBER</p><h1>Join the club.</h1><form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Create account</button></form></section>{% endblock %}
