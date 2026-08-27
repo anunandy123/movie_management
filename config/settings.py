@@ -8,10 +8,10 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 import os
-import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,6 +82,8 @@ DATABASES = {
     )
 }
 
+DATABASES["default"]= dj_database_url.parse("postgresql://movie_management_django_user:u4GwvI7R9jOHCEXbXytvygVWKGEztLwh@dpg-da807k5g1s2s73fk5psg-a.virginia-postgres.render.com/movie_management_django")
+#
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
